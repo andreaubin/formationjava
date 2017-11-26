@@ -30,7 +30,12 @@ public class Pharmacie {
 		// listMedicament.add(new Medicament("Dafalgan",3.75, 5));
 
 		int choix;
-
+		boolean connected = true;
+		
+		if (!connected) {
+			return;
+		}
+		
 		do {
 			choix = afficherMenu();
 
@@ -54,6 +59,21 @@ public class Pharmacie {
 				// quitter();
 			}
 		} while (choix < 6);
+		
+	}
+	
+	public enum ColorisPerso {
+		ROUGE, BLEU, JAUNE;
+	}
+	
+	public enum ColorisPersoHexa {
+		BLANC("#FFFFFF"), NOIR("#000000");
+		
+		private String codeHexa;
+		
+		private ColorisPersoHexa(String codeHexa) {
+			this.codeHexa = codeHexa;
+		}
 	}
 
 	// Les méthodes utilitaires

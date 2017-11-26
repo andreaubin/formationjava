@@ -8,6 +8,22 @@ package com.formation.poo.gestionpharmacie;
  */
 public class PharmacieServiceImpl {
 	
+	public void afficherResultats(String... valeurs) {
+		for (String valeur: valeurs) {
+			System.out.println(valeur);
+		}
+	}
+	
+	public int additionner(int a, int b) {
+		return a + b;
+	}
+	
 	
 
+}
+
+class MaClasse {
+	
+	
+	
 }
