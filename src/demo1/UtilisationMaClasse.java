@@ -24,5 +24,6 @@ public class UtilisationMaClasse {
 		System.out.println("4eme affichage via getter");
 		System.out.println(variable2.getNom());
 	}
+	
 
 }

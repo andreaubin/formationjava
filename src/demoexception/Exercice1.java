@@ -9,11 +9,21 @@ public class Exercice1 {
 	public static void main(String[] args) {
 		System.out.println("Entrez la taille du tableau");
 		Integer taille = scan.nextInt();
-		
-		// Traitement des exceptions ici :
-		Integer[] tableau = new Integer[taille];
-		
-		
+
+		Integer[] tableau;
+		try {
+			// Traitement des exceptions ici :
+			if (taille < 0) {
+				throw new PositiveException();
+			} else {
+				System.out.println("J'arrive à instancier mon tableau !");
+				tableau = new Integer[taille];
+			}
+		} catch (PositiveException e) {
+			System.out.println(e.getMessage());
+		}
+		System.out.println("Le programme continue");
+
 	}
 
 }

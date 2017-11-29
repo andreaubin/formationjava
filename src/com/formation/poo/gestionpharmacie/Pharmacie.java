@@ -15,71 +15,53 @@ public class Pharmacie {
 	private static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String args[]) {
-		
+
 		// service à utiliser pour se servir des différentes méthodes
 		final PharmacieServiceImpl pharmacieService = new PharmacieServiceImpl();
-		
+
 		final List<Client> listClient = new ArrayList<Client>();
 
 		final List<Medicament> listMedicament = new ArrayList<>();
 
-		// listClient.add(new Client("Dupont",0.0));
-		// listClient.add(new Client("Pondu",0.0));
+		listClient.add(new Client("Dupont", 0.0d));
+		listClient.add(new Client("Pondu", 0.0d));
 
-		// listMedicament.add(new Medicament("Doliprane", 5.40, 5));
-		// listMedicament.add(new Medicament("Dafalgan",3.75, 5));
+		listMedicament.add(new Medicament("Doliprane", 5.40d, 5));
+		listMedicament.add(new Medicament("Dafalgan", 3.75d, 5));
 
 		int choix;
-		boolean connected = true;
-		
-		if (!connected) {
-			return;
-		}
-		
+
 		do {
 			choix = afficherMenu();
 
 			switch (choix) {
 			case 1:
-				// acheter(listClient, listMedicament);
+				pharmacieService.acheter(listClient, listMedicament);
 				break;
 			case 2:
-				// approvisionner(listMedicament);
+				pharmacieService.approvisionner(listMedicament);
 				break;
 			case 3:
-				// afficher(listClient, listMedicament);
+				pharmacieService.afficher(listClient, listMedicament);
 				break;
 			case 4:
-				// creerClient(client);
+				pharmacieService.creerClient(listClient);
 				break;
 			case 5:
-				// creerMedicament(medicament);
+				pharmacieService.creerMedicament(listMedicament);
 				break;
 			case 6:
 				// quitter();
 			}
 		} while (choix < 6);
-		
-	}
-	
-	public enum ColorisPerso {
-		ROUGE, BLEU, JAUNE;
-	}
-	
-	public enum ColorisPersoHexa {
-		BLANC("#FFFFFF"), NOIR("#000000");
-		
-		private String codeHexa;
-		
-		private ColorisPersoHexa(String codeHexa) {
-			this.codeHexa = codeHexa;
-		}
+
 	}
 
 	// Les méthodes utilitaires
 
 	/**
 	 * Affiche un menu dans la console
+	 * 
 	 * @return
 	 */
 	static int afficherMenu() {
@@ -89,27 +71,35 @@ public class Pharmacie {
 		System.out.println("1 : Achat de médicament");
 		System.out.println("2 : Approvisionnement en  médicaments");
 		System.out.println("3 : Etats des stocks et des crédits");
-		System.out.println("4 : Quitter");
+		System.out.println("4 : Créer un client");
+		System.out.println("5 : Créer un médicament");
+		System.out.println("6 : Quitter");
 		while ((choix != 1) && (choix != 2) && (choix != 3) && (choix != 4) && (choix != 5) && (choix != 6)) {
 			choix = scanner.nextInt();
 		}
-		return choix; 
-		
+		return choix;
+
 		// consigne :
 		// 1 - Créer les classes Client et Medicament avec les bons attributs
 		// Créer les méthodes suivantes :
-		// 2 - afficher(...) -> afficher les clients et leurs crédits + les médicaments et leurs stocks
-		// 3 - approvisionner(..) -> permet d'approvisionner un médicament. On passe la liste en paramètre.
-		// dans cette méthode, il faudra appeler une méthode trouverMedicament qui demandera à l'utilisateur de donner le nom du médicament
+		// 2 - afficher(...) -> afficher les clients et leurs crédits + les
+		// médicaments et leurs stocks
+		// 3 - approvisionner(..) -> permet d'approvisionner un médicament. On
+		// passe la liste en paramètre.
+		// dans cette méthode, il faudra appeler une méthode trouverMedicament
+		// qui demandera à l'utilisateur de donner le nom du médicament
 		// puis un nombre à ajouter au stock
 		// 4 - acheter -> permet de faire acheter un médicament à un client
 		// on passe la liste des clients et des médicaments en paramètre
-		// réutiliser la méthode trouverMedicament pour retrouver le médicament et créer une méthode trouverClient pour retrouver le bon client
-		// Attention : lors d'un achat, on augmente le crédit du client et on diminue le stock
+		// réutiliser la méthode trouverMedicament pour retrouver le médicament
+		// et créer une méthode trouverClient pour retrouver le bon client
+		// Attention : lors d'un achat, on augmente le crédit du client et on
+		// diminue le stock
 		// Attention 2 : le stock ne peut pas être négatif
-		
+
 		// Bonus 1 : créer les méthodes pour créer un client et un médicament
-		// Bonus 2 : Si vous voulez aller encore plus loin, faire des méthodes pour modifier/supprimer un client/médicament
+		// Bonus 2 : Si vous voulez aller encore plus loin, faire des méthodes
+		// pour modifier/supprimer un client/médicament
 	}
 
 }

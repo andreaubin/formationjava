@@ -11,7 +11,7 @@ public class MaClasse {
 	MaClasse(String nom) {
 		this.nom = nom;
 	}
-	
+
 	public String getNom() {
 		return nom;
 	}
@@ -19,7 +19,7 @@ public class MaClasse {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	
+
 	public void afficherNom() {
 		System.out.println(nom);
 	}

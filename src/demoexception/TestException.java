@@ -9,11 +9,11 @@ public class TestException {
 		// ETAPE 2 - Try catch
 		// try {
 		// System.out.println(4 / 0);
-		// } catch(ArithmeticException e) {
+		// } catch (ArithmeticException e) {
 		// System.out.println("Attention, tu as divisé par zéro !");
 		// }
-		//
-		// System.out.println("Suite du programme");
+
+		System.out.println("Suite du programme");
 
 		// ETAPE 3 - Null Pointer
 		// String string = null;
@@ -24,22 +24,22 @@ public class TestException {
 		// }
 
 		// ETAPE 4 - Throw une exception
-		// int i = -10;
-		//
-		// try {
-		// if (i < 0) {
-		// throw new Exception("Nombre négatif");
-		// }
-		// } catch (Exception e) {
-		// System.out.println(e.getMessage());
-		// }
+//		int i = -10;
+//
+//		try {
+//			if (i < 0) {
+//				throw new Exception("Nombre négatif");
+//			}
+//		} catch (Exception e) {
+//			System.out.println(e.getMessage());
+//		}
 
 		// ETAPE 5 - méthode qui throw une exception
-		// try {
-		// methode1();
-		// } catch (Exception e) {
-		// System.out.println(e.getMessage());
-		// }
+		try {
+			methode1();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 	static void methode1() throws Exception {
