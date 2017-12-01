@@ -2,6 +2,10 @@ package gestionbibliotheque.model;
 
 public class Roman extends Livre {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1676976790747914893L;
 	private String categorie;
 	
 	public Roman() {

@@ -10,13 +10,15 @@ public class ExempleThread extends Thread {
 
 	@Override
 	public void run() {
-		for (int i = 1; i < 1000; i++)
-			System.out.println(i + " " + phrase);
 		try {
-			sleep(200);
+			for (int i = 1; i < 1000; i++) {
+				System.out.println(i + " " + phrase);
+				sleep(200);
+			}
+
 		} catch (InterruptedException e) {
 		}
-		
+
 	}
 
 	public static void main(String args[]) {
@@ -30,7 +32,7 @@ public class ExempleThread extends Thread {
 		thread3.start();
 
 		try {
-			sleep(100);
+			sleep(200);
 		} catch (InterruptedException e) {
 		}
 		System.exit(0);

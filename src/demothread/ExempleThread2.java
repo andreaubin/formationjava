@@ -11,11 +11,13 @@ public class ExempleThread2 extends Thread {
 	}
 
 	public void run() {
+
 		try {
 			sleep(waitTime);
 		} catch (Exception e) {
 		}
 		System.out.print(phrase);
+
 	}
 
 	public static void main(String args[]) {

@@ -7,5 +7,9 @@ public class PositiveException extends Exception {
 	public PositiveException() {
 		super("La valeur est négative !");
 	}
+	
+	public PositiveException(String message) {
+		super(message);
+	}
 
 }

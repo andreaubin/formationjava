@@ -1,7 +1,14 @@
 package gestionbibliotheque.model;
 
-public abstract class Livre {
+import java.io.Serializable;
+
+public abstract class Livre implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5940795265117717654L;
+
 	private String numeroIsbn;
 	
 	private String titre;
